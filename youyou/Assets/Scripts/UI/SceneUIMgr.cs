@@ -15,12 +15,13 @@ public enum SceneUIType{
 /// 场景UI管理器.
 /// </summary>
 public class SceneUIMgr : Singleton<SceneUIMgr> {
-
+	public UISceneBase currentScene;
 	public GameObject LoadSceneUI(SceneUIType type){
 		GameObject gob=null;
 		switch (type) {
 		case SceneUIType.Login:
-			gob=ResourceMgr.Instance.LoadAndInstanite(ResouceType.UIScene, "UIRoot_login");
+			gob = ResourceMgr.Instance.LoadAndInstanite (ResouceType.UIScene, "UIRoot_login");
+			currentScene = gob.GetComponent<UISceneLoginCtrl> ();
 			break;
 		case SceneUIType.Loading:
 			break;

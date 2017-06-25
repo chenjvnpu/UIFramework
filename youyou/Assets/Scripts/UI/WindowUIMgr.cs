@@ -51,7 +51,7 @@ public class WindowUIMgr:Singleton<WindowUIMgr> {
 		Transform transParent=null;
 		switch (containerType) {
 		case WindowUIContainerType.Center:
-			transParent = UISceneLoginCtrl.Instance.GetCenterTransform();
+			transParent =SceneUIMgr.Instance.currentScene.GetCenterTransform();
 			break;
 		case WindowUIContainerType.TopLeft:
 			break;
