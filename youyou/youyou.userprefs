@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UI\WindowUIMgr.cs">
+    <Files>
+      <File FileName="Assets\Scripts\commom\LogonSceneCtrl.cs" Line="15" Column="18" />
+      <File FileName="Assets\Scripts\UI\windowCtrl\UILoginCtrl.cs" Line="36" Column="18" />
+      <File FileName="Assets\Scripts\UI\windowCtrl\UIRegisterCtrl.cs" Line="33" Column="3" />
+      <File FileName="Assets\Scripts\cure\UISceneBase.cs" Line="10" Column="26" />
+      <File FileName="Assets\Scripts\cure\UIBase.cs" Line="48" Column="2" />
+      <File FileName="Assets\Scripts\UI\sceneUICtrl\UISceneLoginCtrl.cs" Line="19" Column="2" />
+      <File FileName="Assets\Scripts\UI\WindowUIMgr.cs" Line="26" Column="8" />
+      <File FileName="Assets\Scripts\cure\UIWindowBase.cs" Line="6" Column="2" />
+      <File FileName="Assets\Scripts\UI\SceneUIMgr.cs" Line="24" Column="57" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

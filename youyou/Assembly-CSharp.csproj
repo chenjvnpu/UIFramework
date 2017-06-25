@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B2B58FB2-4462-6B0C-A872-40DD957E5FE0}</ProjectGuid>
+    <ProjectGuid>{E25910D0-1BDA-B35C-C07E-17095F1DCD22}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -191,7 +191,9 @@
      <Compile Include="Assets\Scripts\commom\LogonSceneCtrl.cs" />
      <Compile Include="Assets\Scripts\commom\ResourceMgr.cs" />
      <Compile Include="Assets\Scripts\cure\Singleton.cs" />
+     <Compile Include="Assets\Scripts\cure\UIBase.cs" />
      <Compile Include="Assets\Scripts\cure\UISceneBase.cs" />
+     <Compile Include="Assets\Scripts\cure\UIWindowBase.cs" />
      <Compile Include="Assets\T4M\Scripts\T4MBillBObjSC.cs" />
      <Compile Include="Assets\T4M\Scripts\T4MLodObjSC.cs" />
      <Compile Include="Assets\T4M\Scripts\T4MObjSC.cs" />
@@ -310,23 +312,23 @@
  <Reference Include="UnityEngine.Networking">
  <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="DOTween43">
- <HintPath>F:/GitHub/youyouCode/New Unity Project/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
- </Reference>
  <Reference Include="DemiLib">
- <HintPath>F:/GitHub/youyouCode/New Unity Project/Assets/Demigiant/DemiLib/DemiLib.dll</HintPath>
- </Reference>
- <Reference Include="DOTween50">
- <HintPath>F:/GitHub/youyouCode/New Unity Project/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+ <HintPath>F:/GitHub/UIframework/youyou/Assets/Demigiant/DemiLib/DemiLib.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>F:/GitHub/youyouCode/New Unity Project/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ <HintPath>F:/GitHub/UIframework/youyou/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
- <Reference Include="DOTweenPro">
- <HintPath>F:/GitHub/youyouCode/New Unity Project/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ <Reference Include="DOTween43">
+ <HintPath>F:/GitHub/UIframework/youyou/Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
  </Reference>
  <Reference Include="DOTween46">
- <HintPath>F:/GitHub/youyouCode/New Unity Project/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+ <HintPath>F:/GitHub/UIframework/youyou/Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTween50">
+ <HintPath>F:/GitHub/UIframework/youyou/Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenPro">
+ <HintPath>F:/GitHub/UIframework/youyou/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
