@@ -13,7 +13,7 @@ public class UISceneLoginCtrl : UISceneBase {
 	protected override void OnStart ()
 	{
 		base.OnStart ();
-		GameObject gob= WindowUIMgr.Instance.LoadWindowUI (WindowUIType.Login);
+		GameObject gob= WindowUIMgr.Instance.OpenWindowUI (WindowUIType.Login);
 	}
 	
 

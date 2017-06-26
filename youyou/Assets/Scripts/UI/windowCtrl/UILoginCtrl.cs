@@ -12,7 +12,7 @@ public class UILoginCtrl : UIWindowBase {
 
 	private void HandelRegEvent(){
 		Destroy (gameObject);
-		WindowUIMgr.Instance.LoadWindowUI (WindowUIType.Register,WindowUIContainerType.Center);
+		WindowUIMgr.Instance.OpenWindowUI (WindowUIType.Register);
 
 	}
 

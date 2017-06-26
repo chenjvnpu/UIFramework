@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class UIRegisterCtrl : MonoBehaviour {
+public class UIRegisterCtrl : UIWindowBase {
 
 	void Awake(){
 		UIButton[] btnArr = GetComponentsInChildren<UIButton> (true);//获取所有子对象的按钮，包括隐藏按钮
@@ -18,7 +18,7 @@ public class UIRegisterCtrl : MonoBehaviour {
 		case "btn_back":
 			break;
 		case "btn_reg":
-			HandelRegEvent ();
+//			HandelRegEvent ();
 			break;
 
 		default:
@@ -26,17 +26,17 @@ public class UIRegisterCtrl : MonoBehaviour {
 		}
 
 	}
-	private void HandelRegEvent(){
-		Destroy (gameObject);
-		WindowUIMgr.Instance.LoadWindowUI (WindowUIType.Register,WindowUIContainerType.Center);
-
-	}
-
-	private void HandelBackEvent(){
-		Destroy (gameObject);
-		WindowUIMgr.Instance.LoadWindowUI (WindowUIType.Register,WindowUIContainerType.Center);
-
-	}
+//	private void HandelRegEvent(){
+//		Destroy (gameObject);
+//		WindowUIMgr.Instance.OpenWindowUI (WindowUIType.Register);
+//
+//	}
+//
+//	private void HandelBackEvent(){
+//		Destroy (gameObject);
+//		WindowUIMgr.Instance.OpenWindowUI (WindowUIType.Register);
+//
+//	}
 
 
 }

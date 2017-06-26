@@ -1,16 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-/// <summary>
-/// 场景类型.
-/// </summary>
-public enum SceneUIType{
-	/// <summary>
-	/// 登录场景.
-	/// </summary>
-	Login,
-	Loading,
-	MainCity
-}
+
 /// <summary>
 /// 场景UI管理器.
 /// </summary>
