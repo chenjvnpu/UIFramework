@@ -45,7 +45,7 @@ public class ResourceMgr :Singleton<ResourceMgr>
 		GameObject gob = null;
 		if (mPrefabsTable.ContainsKey (path)) {//从缓存中加载
 			gob = mPrefabsTable [path] as GameObject;
-			Debug.Log ("load from cache");
+//			Debug.Log ("load from cache");
 		} else {
 			StringBuilder myPathSb = new StringBuilder ();
 
