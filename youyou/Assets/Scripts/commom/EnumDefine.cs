@@ -7,6 +7,10 @@ using System.Collections;
 /// </summary>
 public enum SceneUIType{
 	/// <summary>
+	/// 空的.
+	/// </summary>
+	None,
+	/// <summary>
 	/// 登录场景.
 	/// </summary>
 	Login,
@@ -19,6 +23,11 @@ public enum SceneUIType{
 /// 场景类型.
 /// </summary>
 public enum WindowUIType{
+	
+	/// <summary>
+	/// 空.
+	/// </summary>
+	None,
 	/// <summary>
 	/// 登录窗口.
 	/// </summary>

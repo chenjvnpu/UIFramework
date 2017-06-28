@@ -16,56 +16,65 @@ public class WindowUIMgr:Singleton<WindowUIMgr> {
 	/// <returns>The window U.</returns>
 	/// <param name="type">Type.</param>
 	/// <param name="containerType">窗口挂点位置.</param>
-	public GameObject OpenWindowUI (WindowUIType type)
+	public GameObject OpenWindowUI (WindowUIType type,bool setToTop=true)
 	{
-		if (windowDic.ContainsKey (type)) {
-			return windowDic[type].gameObject;	
-		}
+		
+
+		if (type == WindowUIType.None)
+			return null;
 		GameObject gob = null;
-		string prefabName = string.Empty;
-		switch (type) {
-		case WindowUIType.Login:
-			prefabName = "panel_login";
-			break;
-		case WindowUIType.Register:
-			prefabName = "panel_reg";
-			break;
-		default:
-			break;
+		if (windowDic.ContainsKey (type)) {
+			gob = windowDic [type].gameObject;	
+		} else {
+			string prefabName = string.Empty;
+			switch (type) {
+			case WindowUIType.Login:
+				prefabName = "panel_login";
+				break;
+			case WindowUIType.Register:
+				prefabName = "panel_reg";
+				break;
+			default:
+				break;
+			}
+
+			gob = ResourceMgr.Instance.LoadAndInstanite (ResouceType.UIWindow, prefabName, putInCache: true);
+
+			UIWindowBase windowBase = gob.GetComponent<UIWindowBase> ();
+			if (windowBase == null)
+				return null;
+			windowBase.currentWindowType = type;
+			windowDic.Add (type, windowBase);
+			//		WindowUIContainerType containerType = windowBase.containerType;
+			//		WindowShowStyle style = windowBase.showStyle;
+			Transform transParent = null;
+			switch (windowBase.containerType) {
+			case WindowUIContainerType.Center:
+				transParent = SceneUIMgr.Instance.currentScene.GetCenterTransform ();
+				break;
+			case WindowUIContainerType.TopLeft:
+				break;
+			case WindowUIContainerType.TopRight:
+				break;
+			case WindowUIContainerType.BotomoLeft:
+				break;
+			case WindowUIContainerType.BotomRight:
+				break;
+
+			default:
+				break;
+			}
+			if (transParent) {
+				gob.transform.parent = transParent;
+				gob.transform.localPosition = Vector3.zero;
+				gob.transform.localScale = Vector3.one;
+				NGUITools.SetActive (gob, false);
+				StartShowWindow ( windowBase, true);
+			}
 		}
 
-		gob = ResourceMgr.Instance.LoadAndInstanite (ResouceType.UIWindow, prefabName, putInCache: true);
-
-		UIWindowBase windowBase = gob.GetComponent<UIWindowBase> ();
-		windowBase.currentWindowType = type;
-		windowDic.Add (type, windowBase);
-		//		WindowUIContainerType containerType = windowBase.containerType;
-		//		WindowShowStyle style = windowBase.showStyle;
-		Transform transParent = null;
-		switch (windowBase.containerType) {
-		case WindowUIContainerType.Center:
-			transParent = SceneUIMgr.Instance.currentScene.GetCenterTransform ();
-			break;
-		case WindowUIContainerType.TopLeft:
-			break;
-		case WindowUIContainerType.TopRight:
-			break;
-		case WindowUIContainerType.BotomoLeft:
-			break;
-		case WindowUIContainerType.BotomRight:
-			break;
-
-		default:
-			break;
-		}
-		if (transParent) {
-			gob.transform.parent = transParent;
-			gob.transform.localPosition = Vector3.zero;
-			gob.transform.localScale = Vector3.one;
-			NGUITools.SetActive (gob, false);
-			StartShowWindow ( windowBase, true);
-		}
-
+		if (setToTop)
+			LayerUIMgr.Instance.SetToTopLayer (gob);
 
 		return gob;
 	}

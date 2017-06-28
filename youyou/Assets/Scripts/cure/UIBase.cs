@@ -21,6 +21,10 @@ public class UIBase : MonoBehaviour {
 		OnStart ();
 	}
 
+	void OnDestroy() {
+		BeforeDestroy ();
+	}
+
 	// Update is called once per frame
 	//	void Update () {
 	//		
@@ -35,6 +39,10 @@ public class UIBase : MonoBehaviour {
 
 	protected virtual void OnStart(){
 		
+	}
+
+	protected virtual void BeforeDestroy(){
+	
 	}
 
 	/// <summary>

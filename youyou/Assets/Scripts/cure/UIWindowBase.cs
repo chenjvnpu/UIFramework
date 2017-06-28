@@ -15,5 +15,22 @@ public class UIWindowBase : UIBase {
 	public float durition=0.2f;
 	[HideInInspector]
 	public WindowUIType currentWindowType;
+	/// <summary>
+	/// 下一个打开的窗口.
+	/// </summary>
+	protected WindowUIType nextOpenWindowType=WindowUIType.None;
 
+	protected virtual void  Close(){
+		WindowUIMgr.Instance.CloseWindow(currentWindowType);
+	}
+
+	protected override void BeforeDestroy ()
+	{
+		base.BeforeDestroy ();
+		if (nextOpenWindowType == WindowUIType.None) {
+			return;
+		} else {
+			WindowUIMgr.Instance.OpenWindowUI (nextOpenWindowType);
+		}
+	}
 }

@@ -3,18 +3,7 @@ using System.Collections;
 
 public class UILoginCtrl : UIWindowBase {
 
-	 
 
-	private void BtnClic(GameObject go){
-		
-		
-	}
-
-	private void HandelRegEvent(){
-		Destroy (gameObject);
-		WindowUIMgr.Instance.OpenWindowUI (WindowUIType.Register);
-
-	}
 
 	protected override void OnAwake ()
 	{
@@ -43,7 +32,16 @@ public class UILoginCtrl : UIWindowBase {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+//	void Update () {
+//	
+//	}
+
+	private void HandelRegEvent(){
+		Close ();
+		nextOpenWindowType = WindowUIType.Register;
+
 	}
+
+
+
 }
