@@ -21,4 +21,16 @@ public class GlobalInit : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	#region 常量
+	/// <summary>
+	/// 昵称key.
+	/// </summary>
+	public static string NICKNAME = "nickName";
+	/// <summary>
+	/// 密码key.
+	/// </summary>
+	public static string PASSWORD = "password";
+
+	#endregion
 }

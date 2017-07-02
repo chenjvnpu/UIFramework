@@ -18,4 +18,16 @@ public class LayerUIMgr :Singleton<LayerUIMgr> {
 
 	}
 
+	public void Reset(){
+		mPanelDepth=50;
+	}
+
+	/// <summary>
+	/// 打开窗口为0的时候，重置初始化层级.
+	/// </summary>
+	public void ChenckOpenWindow(){
+		if(WindowUIMgr.Instance.OpenWindowCount==0){
+			Reset ();
+		}
+	}
 }

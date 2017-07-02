@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+public enum SceneType{
+	Loding,
+	Login,
+	City
+}
 
 /// <summary>
 /// 场景类型.
@@ -36,7 +40,11 @@ public enum WindowUIType{
 	/// 注册窗口.
 	/// </summary>
 	Register,
-	SelectServer
+	SelectServer,
+	/// <summary>
+	/// 角色信息窗口.
+	/// </summary>
+	RoleInfo
 
 }
 /// <summary>

@@ -16,6 +16,8 @@ public class SceneUIMgr : Singleton<SceneUIMgr> {
 		case SceneUIType.Loading:
 			break;
 		case SceneUIType.MainCity:
+			gob = ResourceMgr.Instance.LoadAndInstanite (ResouceType.UIScene, "UI Root_city");
+			currentScene = gob.GetComponent<UISceneCityCtrl> ();
 			break;
 		default:
 			break;

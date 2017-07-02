@@ -8,6 +8,16 @@ using System.Collections.Generic;
 public class WindowUIMgr:Singleton<WindowUIMgr> {
 	private Dictionary<WindowUIType,UIWindowBase> windowDic = new Dictionary<WindowUIType, UIWindowBase> ();
 
+	/// <summary>
+	/// 打开窗口的数量.
+	/// </summary>
+	/// <value>The open window count.</value>
+	public int OpenWindowCount{
+		get{
+			return windowDic.Count;
+		}
+	}
+
 	#region MyRegion打开或者关闭窗口
 
 	/// <summary>
@@ -33,6 +43,9 @@ public class WindowUIMgr:Singleton<WindowUIMgr> {
 				break;
 			case WindowUIType.Register:
 				prefabName = "panel_reg";
+				break;
+			case WindowUIType.RoleInfo:
+				prefabName = "panel_RoleInfo";
 				break;
 			default:
 				break;
@@ -128,10 +141,11 @@ public class WindowUIMgr:Singleton<WindowUIMgr> {
 	/// </summary>
 	/// <param name="window">Window.</param>
 	void DestroyWindow(UIWindowBase window){
-		GameObject.Destroy (window.gameObject);
+		
 		if(windowDic.ContainsKey(window.currentWindowType)){
 			windowDic.Remove (window.currentWindowType);
 		}
+		GameObject.Destroy (window.gameObject);
 	}
 	/// <summary>
 	/// Shows the normal window.

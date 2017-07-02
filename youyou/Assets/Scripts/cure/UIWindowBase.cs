@@ -26,6 +26,7 @@ public class UIWindowBase : UIBase {
 
 	protected override void BeforeDestroy ()
 	{
+		LayerUIMgr.Instance.ChenckOpenWindow ();
 		base.BeforeDestroy ();
 		if (nextOpenWindowType == WindowUIType.None) {
 			return;
