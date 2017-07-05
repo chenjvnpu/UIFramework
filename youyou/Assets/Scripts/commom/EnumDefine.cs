@@ -72,3 +72,56 @@ public enum WindowShowStyle{
 	FromLeft,
 	FromRight
 }
+/// <summary>
+/// 角色类型 Role type.
+/// </summary>
+public enum RoleType{
+	None=0,//未设置
+	MainPlayer=1,
+	Monster=2,
+
+
+}
+/// <summary>
+///角色状态 Role state.
+/// </summary>
+public enum RoleState{
+	None=0,//未设置
+	Idle=1,
+	Run=2,
+	Attack=3,
+	Hurt=4,
+	Die=5
+
+}
+
+/// <summary>
+///动画状态机 动画片段名称 Role animation clip nmme.
+/// </summary>
+public enum RoleAnimClipNmme{
+	Idle_Normal,
+	Idle_Fight,
+	Run,
+	Hurt,
+	Die,
+	PhyAttack1,
+	Skill4,
+	Skill5,
+	Skill6,
+
+
+
+}
+/// <summary>
+///动画跳转的条件，参数名称 To animation condition.
+/// </summary>
+public enum ToAnimCondition{
+	ToIdleNormal,
+	ToIdleFight,
+	ToRun,
+	ToHurt,
+	ToDie,
+	ToAttack,
+	ToSkile,
+	CurState
+}
