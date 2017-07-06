@@ -72,6 +72,32 @@ public enum WindowShowStyle{
 	FromLeft,
 	FromRight
 }
+
+/// <summary>
+/// 资源类型
+/// </summary>
+public enum ResouceType
+{
+	/// <summary>
+	/// 场景UI
+	/// </summary>
+	UIScene,
+	/// <summary>
+	/// 窗口UI
+	/// </summary>
+	UIWindow,
+	/// <summary>
+	/// 角色
+	/// </summary>
+	Role,
+	/// <summary>
+	/// 特效
+	/// </summary>
+	Effect,
+
+	UIOther
+}
+
 /// <summary>
 /// 角色类型 Role type.
 /// </summary>

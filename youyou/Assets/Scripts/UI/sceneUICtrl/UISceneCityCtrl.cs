@@ -7,6 +7,7 @@ public class UISceneCityCtrl : UISceneBase {
 	{
 		base.OnAwake ();
 
+
 	}
 
 	protected override void OnStart ()
@@ -24,6 +25,7 @@ public class UISceneCityCtrl : UISceneBase {
 	}
 
 	void Update(){
+		
 
 	}
 

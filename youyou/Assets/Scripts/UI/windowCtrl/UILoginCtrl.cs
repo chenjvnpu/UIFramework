@@ -57,6 +57,7 @@ public class UILoginCtrl : UIWindowBase {
 		string oldName=PlayerPrefs.GetString(GlobalInit.NICKNAME);
 		string oldpsd=PlayerPrefs.GetString(GlobalInit.PASSWORD);
 		if (name == oldName && password == oldpsd) {
+			GlobalInit.Instance.curRoleNickName = "zhujue";
 			SceneMgr.Instance.LoadToCity ();
 		} else {
 			tipsLabel.text="账号或者密码有误";

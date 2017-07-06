@@ -33,4 +33,16 @@ public class GlobalInit : MonoBehaviour {
 	public static string PASSWORD = "password";
 
 	#endregion
+	/// <summary>
+	///当前玩家 The current role ctrl.
+	/// </summary>
+	/// 
+	[HideInInspector]
+	public RoleCtrl curRoleCtrl;
+	/// <summary>
+	///当前玩家昵称 The name of the current role nick.
+	/// </summary>
+	[HideInInspector]
+	public string curRoleNickName;
+
 }

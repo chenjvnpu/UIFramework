@@ -1,28 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Text;
-/// <summary>
-/// 资源类型
-/// </summary>
-public enum ResouceType
-{
-	/// <summary>
-	/// 场景UI
-	/// </summary>
-	UIScene,
-	/// <summary>
-	/// 窗口UI
-	/// </summary>
-	UIWindow,
-	/// <summary>
-	/// 角色
-	/// </summary>
-	Role,
-	/// <summary>
-	/// 特效
-	/// </summary>
-	Effect
-}
+
 public class ResourceMgr :Singleton<ResourceMgr>
 {
 	/// <summary>
@@ -62,7 +41,9 @@ public class ResourceMgr :Singleton<ResourceMgr>
 			case ResouceType.Effect:
 				myPathSb.Append ("EffectPrefabs/");
 				break;
-
+			case ResouceType.UIOther:
+				myPathSb.Append ("UIPrefabs/Other/");
+				break;
 			default:
 				break;
 			}	

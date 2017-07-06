@@ -5,6 +5,9 @@ using System.Collections;
 /// </summary>
 public class RoleCtrl : MonoBehaviour {
 	[SerializeField]
+	private Transform headBarPos;//头顶血条挂点
+	private GameObject toBarUI;
+	[SerializeField]
 	public Animator anim;
 	/// <summary>
 	/// 当前角色类型  The type of the current role.
@@ -22,14 +25,17 @@ public class RoleCtrl : MonoBehaviour {
 	///当前角色的有限状态机管理 The current role fsm mgr.
 	/// </summary>
 	RoleFSMMgr currentRoleFsmMgr=null;
-
+	[HideInInspector]
+	public Vector3 TargetPos;
+	public CharacterController characterControl;
+	public float moveSpeed=10f;
 	/// <summary>
 	/// Init the specified roleType, roleInfo and roleAI.
 	/// </summary>
 	/// <param name="roleType">Role type.</param>
 	/// <param name="roleInfo">Role info.</param>
 	/// <param name="roleAI">Role A.</param>
-	void init(RoleType roleType,RoleInfoBase roleInfo,IRoleAI roleAI){
+	public void init(RoleType roleType,RoleInfoBase roleInfo,IRoleAI roleAI){
 		this.curRoleType = roleType;
 		this.currentRoleInfo = roleInfo;
 		this.currentRoleAI = roleAI;
@@ -41,8 +47,11 @@ public class RoleCtrl : MonoBehaviour {
 	{
 		currentRoleFsmMgr.ChangeState (RoleState.Idle);
 	}
-	public void ToRun ()
+	public void MoveTo (Vector3 targetPos)
 	{
+		if (targetPos == Vector3.zero)
+			return;
+		TargetPos = targetPos;
 		currentRoleFsmMgr.ChangeState (RoleState.Run);
 	}
 	public void ToAttack ()
@@ -64,7 +73,10 @@ public class RoleCtrl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		characterControl = this.GetComponent<CharacterController> ();
 		currentRoleFsmMgr = new RoleFSMMgr (this);
+		ToIdle ();
+		InidRoleHeadBar ();
 	}
 	
 	// Update is called once per frame
@@ -82,7 +94,7 @@ public class RoleCtrl : MonoBehaviour {
 		}
 
 		if(Input.GetKeyDown(KeyCode.R)){
-			ToRun ();
+//			MoveTo ();
 		}
 
 		if(Input.GetKeyDown(KeyCode.A)){
@@ -96,5 +108,20 @@ public class RoleCtrl : MonoBehaviour {
 		if(Input.GetKeyDown(KeyCode.D)){
 			ToDie ();
 		}
+	}
+
+	/// <summary>
+	///初始化头顶条 Inids the role head bar.
+	/// </summary>
+	void InidRoleHeadBar(){
+		if (RoleHeadBarRoot.Instance == null || currentRoleInfo==null || headBarPos==null)
+			return;
+		//
+		toBarUI=ResourceMgr.Instance.LoadAndInstanite(ResouceType.UIOther,"roleHeadBar");
+		toBarUI.transform.parent = RoleHeadBarRoot.Instance.gameObject.transform;
+		toBarUI.transform.localScale = Vector3.one;
+		toBarUI.transform.position = Vector3.zero;
+		RoleHeadBarCtrl rc = toBarUI.GetComponent<RoleHeadBarCtrl> ();
+		rc.Init (headBarPos,currentRoleInfo.NickName);
 	}
 }
