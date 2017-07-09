@@ -24,4 +24,6 @@ public class RoleInfoBase {
 	/// The current hp.
 	/// </summary>
 	public int CurHp;
+
+
 }

@@ -29,6 +29,11 @@ public class RoleStateDie : RoleStateAbstract {
 		CurRoleAnimInfo = this.CurRoleFsmMgr.CurRoleCtrl.anim.GetCurrentAnimatorStateInfo (0);
 		if(CurRoleAnimInfo.IsName(RoleAnimClipNmme.Die.ToString())){
 			this.CurRoleFsmMgr.CurRoleCtrl.anim.SetInteger (ToAnimCondition.CurState.ToString(),(int)RoleState.Die);
+
+			if(CurRoleAnimInfo.normalizedTime >1){//已经执行过一次动画，返回到idle状态
+				//				CurRoleFsmMgr.ChangeState(RoleState.Idle);
+				CurRoleFsmMgr.CurRoleCtrl.RoleDie(CurRoleFsmMgr.CurRoleCtrl);//刷怪点监听
+			}
 		}
 	}
 }

@@ -24,11 +24,46 @@ public class RoleCtrl : MonoBehaviour {
 	/// <summary>
 	///当前角色的有限状态机管理 The current role fsm mgr.
 	/// </summary>
-	RoleFSMMgr currentRoleFsmMgr=null;
+	public RoleFSMMgr currentRoleFsmMgr=null;
 	[HideInInspector]
 	public Vector3 TargetPos;
+	[HideInInspector]
 	public CharacterController characterControl;
 	public float moveSpeed=10f;
+	[HideInInspector]
+	public RoleHeadBarCtrl headBarCtrl;
+	/// <summary>
+	/// 出生点The born point.
+	/// </summary>
+	[HideInInspector]
+	public Vector3 BornPoint;
+
+	/// <summary>
+	/// 视野范围The view range.
+	/// </summary>
+	public float viewRange;
+
+	/// <summary>
+	/// 巡逻范围The patrol range.
+	/// </summary>
+	public float patrolRange;
+
+	/// <summary>
+	/// 攻击范围The attack range.
+	/// </summary>
+	public float attackRange;
+	/// <summary>
+	///攻击的对象 The lock enemy.
+	/// </summary>
+	public RoleCtrl lockEnemy;
+
+	/// <summary>
+	/// 角色受伤委托The role hurt.
+	/// </summary>
+	public System.Action RoleHurt;
+	public System.Action<RoleCtrl> RoleDie;
+
+
 	/// <summary>
 	/// Init the specified roleType, roleInfo and roleAI.
 	/// </summary>
@@ -56,12 +91,38 @@ public class RoleCtrl : MonoBehaviour {
 	}
 	public void ToAttack ()
 	{
+		if(lockEnemy==null){return;}
 		currentRoleFsmMgr.ChangeState (RoleState.Attack);
+		lockEnemy.ToHurt (100,0.5f);
 	}
-	public void ToHurt ()
-	{currentRoleFsmMgr.ChangeState (RoleState.Hurt);
+	/// <summary>
+	/// Tos the hurt.
+	/// </summary>
+	/// <param name="attackValue">攻击力.</param>
+	/// <param name="delayTime">掉血延迟时间.</param>
+	public void ToHurt (int attackValue,float delayTime)
+	{
+		StartCoroutine (DelayHurt (attackValue,delayTime));
 
 	}
+	private IEnumerator DelayHurt(int attackValue,float delayTime){
+		yield return new WaitForSeconds (delayTime);
+		//计算得到伤害值
+		int demageValue=(int)(attackValue*Random.Range(0.5f,1f));
+		if(RoleHurt!=null){
+			RoleHurt ();
+		}
+		currentRoleInfo.CurHp -= demageValue;
+		if (currentRoleInfo.CurHp <= 0) {
+			currentRoleFsmMgr.ChangeState (RoleState.Die);
+		} else {
+			currentRoleFsmMgr.ChangeState (RoleState.Hurt);
+			headBarCtrl.GetHurt ("-" + demageValue.ToString(),currentRoleInfo.CurHp/(float)currentRoleInfo.MaxHp);
+		}
+
+
+	}
+
 	public void ToDie ()
 	{
 		currentRoleFsmMgr.ChangeState (RoleState.Die);
@@ -81,11 +142,11 @@ public class RoleCtrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-//		if(currentRoleAI==null){
-//			return;
-//		}
-//		currentRoleAI.DoAI ();
-//
+		if(currentRoleAI==null){
+			return;
+		}
+		currentRoleAI.DoAI ();
+
 		if(currentRoleFsmMgr!=null)
 		currentRoleFsmMgr.OnUpdate ();
 
@@ -102,12 +163,14 @@ public class RoleCtrl : MonoBehaviour {
 		}
 
 		if(Input.GetKeyDown(KeyCode.H)){
-			ToHurt ();
+			ToHurt (100,.5f);
 		}
 
 		if(Input.GetKeyDown(KeyCode.D)){
 			ToDie ();
 		}
+
+
 	}
 
 	/// <summary>
@@ -121,7 +184,14 @@ public class RoleCtrl : MonoBehaviour {
 		toBarUI.transform.parent = RoleHeadBarRoot.Instance.gameObject.transform;
 		toBarUI.transform.localScale = Vector3.one;
 		toBarUI.transform.position = Vector3.zero;
-		RoleHeadBarCtrl rc = toBarUI.GetComponent<RoleHeadBarCtrl> ();
-		rc.Init (headBarPos,currentRoleInfo.NickName);
+		headBarCtrl = toBarUI.GetComponent<RoleHeadBarCtrl> ();
+		headBarCtrl.Init (headBarPos,currentRoleInfo.NickName,isShowHpBar:(curRoleType==RoleType.MainPlayer?false:true));
+
+	}
+
+	void OnDestroy(){
+		if(toBarUI.gameObject){
+			Destroy (toBarUI.gameObject);
+		}
 	}
 }

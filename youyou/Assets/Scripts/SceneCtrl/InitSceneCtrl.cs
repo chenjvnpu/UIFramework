@@ -11,7 +11,7 @@ public class InitSceneCtrl : MonoBehaviour {
 	}
 	
 	IEnumerator LoadScene (){
-		yield return new WaitForSeconds (4 );
+		yield return new WaitForSeconds (1 );
 		SceneMgr.Instance.LoadToLogin ();
 		yield return null;
 	}

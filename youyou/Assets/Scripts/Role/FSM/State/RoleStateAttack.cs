@@ -14,6 +14,10 @@ public class RoleStateAttack : RoleStateAbstract {
 		base.OnEnter ();
 		this.CurRoleFsmMgr.CurRoleCtrl.anim.SetBool (ToAnimCondition.ToAttack.ToString(), true);
 //		this.CurRoleFsmMgr.CurRoleCtrl.anim.SetInteger (ToAnimCondition.ToSkile.ToString(), 1);
+		if(CurRoleFsmMgr.CurRoleCtrl.lockEnemy!=null){
+			this.CurRoleFsmMgr.CurRoleCtrl.transform.LookAt(new Vector3(CurRoleFsmMgr.CurRoleCtrl.lockEnemy.transform.position.x,CurRoleFsmMgr.CurRoleCtrl.transform.position.y,CurRoleFsmMgr.CurRoleCtrl.lockEnemy.transform.position.z));
+		}
+
 
 	}
 
@@ -34,6 +38,6 @@ public class RoleStateAttack : RoleStateAbstract {
 //				CurRoleFsmMgr.ChangeState(RoleState.Idle);
 				CurRoleFsmMgr.CurRoleCtrl.ToIdle();
 			}
-		}
+		}else this.CurRoleFsmMgr.CurRoleCtrl.anim.SetInteger (ToAnimCondition.CurState.ToString(),0);//????????????????
 	}
 }

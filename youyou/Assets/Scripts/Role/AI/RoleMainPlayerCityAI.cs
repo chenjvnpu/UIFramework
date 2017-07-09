@@ -9,12 +9,30 @@ public class RoleMainPlayerCityAI : IRoleAI {
 
 	#region IRoleAI1 implementation
 
+	public RoleCtrl currentRole {
+		get;
+		set;
+	}
+
 	public void DoAI ()
 	{
-		throw new System.NotImplementedException ();
+		//如果存在攻击敌人 就进行攻击
+		if(currentRole.lockEnemy!=null ){
+			if(currentRole.lockEnemy.currentRoleInfo.CurHp<=0){
+				currentRole.lockEnemy = null;
+			}
+			if( currentRole.currentRoleFsmMgr.CurRoleStateType!=RoleState.Attack){
+				currentRole.ToAttack ();
+			}
+
+		}
 	}
 
 	#endregion
+
+	public RoleMainPlayerCityAI (RoleCtrl roleCtrl){
+		currentRole = roleCtrl;
+	}
 	
 
 }
