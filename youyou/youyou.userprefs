@@ -1,23 +1,27 @@
-﻿<Properties StartupItem="Assembly-CSharp.csproj">
+﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Util\GameobjectUtil.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Role\RoleCtrl.cs">
     <Files>
-      <File FileName="Assets\Scripts\commom\LogonSceneCtrl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\windowCtrl\UILoginCtrl.cs" Line="15" Column="24" />
-      <File FileName="Assets\Scripts\UI\windowCtrl\UIRegisterCtrl.cs" Line="4" Column="43" />
-      <File FileName="Assets\Scripts\cure\UISceneBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\cure\UIBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\sceneUICtrl\UISceneLoginCtrl.cs" Line="16" Column="40" />
-      <File FileName="Assets\Scripts\UI\WindowUIMgr.cs" Line="113" Column="3" />
-      <File FileName="Assets\Scripts\cure\UIWindowBase.cs" Line="10" Column="8" />
-      <File FileName="Assets\Scripts\UI\SceneUIMgr.cs" Line="12" Column="26" />
-      <File FileName="Assets\NGUI\Scripts\Editor\NGUIMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Util\GameobjectUtil.cs" Line="11" Column="13" />
-      <File FileName="Assets\Scripts\commom\EnumDefine.cs" Line="57" Column="2" />
+      <File FileName="Assets\Scripts\SceneCtrl\MonsterAbout\MonsterCreatePoint.cs" Line="52" Column="9" />
+      <File FileName="Assets\Scripts\Role\RoleCtrl.cs" Line="187" Column="58" />
+      <File FileName="Assets\Scripts\Role\RoleMgr.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SceneCtrl\CitySceneCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Role\AI\RoleMonsterAI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Role\AI\IRoleAI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Role\AI\RoleMainPlayerCityAI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Source\Models\Player\cike\动画帧数刺客.txt" Line="1" Column="1" />
+      <File FileName="Assets\Source\Models\Monster\nvbing\怪物-近战女兵.txt" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\commom\ResourceMgr.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\other\RoleHeadBarRoot.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Role\RoleHeadBarCtrl.cs" Line="38" Column="21" />
+      <File FileName="Assets\Scripts\Role\FSM\State\RoleStateAttack.cs" Line="40" Column="5" />
+      <File FileName="Assets\Scripts\Role\FSM\State\RoleStateDie.cs" Line="35" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="F:\GitHub\UIframework\youyou\Assets\Scripts\Role\RoleCtrl.cs" line="131" column="3" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

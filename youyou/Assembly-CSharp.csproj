@@ -38,13 +38,22 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>D:/Program Files/unity5.4.1/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>D:/Program Files/unity5.4.1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AstarPathfindingProject\Core\AstarPath.cs" />
+     <Compile Include="Assets\HUD Text\Examples\Scripts\ChatManager.cs" />
+     <Compile Include="Assets\HUD Text\Examples\Scripts\ChatParticipant.cs" />
+     <Compile Include="Assets\HUD Text\Examples\Scripts\ColliderDisplayText.cs" />
+     <Compile Include="Assets\HUD Text\Examples\Scripts\HUDRoot.cs" />
+     <Compile Include="Assets\HUD Text\Examples\Scripts\LightFlicker.cs" />
+     <Compile Include="Assets\HUD Text\Examples\Scripts\Rotate.cs" />
+     <Compile Include="Assets\HUD Text\Scripts\HUDText.cs" />
+     <Compile Include="Assets\HUD Text\Scripts\UIFollowTarget.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipItems.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\EquipRandomItem.cs" />
      <Compile Include="Assets\NGUI\Examples\Scripts\InventorySystem\Game\UICursor.cs" />
@@ -182,16 +191,45 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITexture.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
+     <Compile Include="Assets\Scripts\Camera\CameraCtrl.cs" />
+     <Compile Include="Assets\Scripts\Role\AI\IRoleAI.cs" />
+     <Compile Include="Assets\Scripts\Role\AI\RoleMainPlayerCityAI.cs" />
+     <Compile Include="Assets\Scripts\Role\AI\RoleMonsterAI.cs" />
+     <Compile Include="Assets\Scripts\Role\FSM\RoleFSMMgr.cs" />
+     <Compile Include="Assets\Scripts\Role\FSM\State\RoleStateAbstract.cs" />
+     <Compile Include="Assets\Scripts\Role\FSM\State\RoleStateAttack.cs" />
+     <Compile Include="Assets\Scripts\Role\FSM\State\RoleStateDie.cs" />
+     <Compile Include="Assets\Scripts\Role\FSM\State\RoleStateHurt.cs" />
+     <Compile Include="Assets\Scripts\Role\FSM\State\RoleStateIdle.cs" />
+     <Compile Include="Assets\Scripts\Role\FSM\State\RoleStateRun.cs" />
+     <Compile Include="Assets\Scripts\Role\RoleCtrl.cs" />
+     <Compile Include="Assets\Scripts\Role\RoleHeadBarCtrl.cs" />
+     <Compile Include="Assets\Scripts\Role\RoleInfo\RoleInfoBase.cs" />
+     <Compile Include="Assets\Scripts\Role\RoleInfo\RoleInfoMainPlayer.cs" />
+     <Compile Include="Assets\Scripts\Role\RoleInfo\RoleInfoMonster.cs" />
+     <Compile Include="Assets\Scripts\Role\RoleMgr.cs" />
+     <Compile Include="Assets\Scripts\SceneCtrl\CitySceneCtrl.cs" />
+     <Compile Include="Assets\Scripts\SceneCtrl\InitSceneCtrl.cs" />
+     <Compile Include="Assets\Scripts\SceneCtrl\LodingSceneCtrl.cs" />
+     <Compile Include="Assets\Scripts\SceneCtrl\LogonSceneCtrl.cs" />
+     <Compile Include="Assets\Scripts\SceneCtrl\MonsterAbout\MonsterCreatePoint.cs" />
      <Compile Include="Assets\Scripts\UI\SceneUIMgr.cs" />
      <Compile Include="Assets\Scripts\UI\WindowUIMgr.cs" />
+     <Compile Include="Assets\Scripts\UI\other\RoleHeadBarRoot.cs" />
+     <Compile Include="Assets\Scripts\UI\other\UIPlayerInfo.cs" />
+     <Compile Include="Assets\Scripts\UI\sceneUICtrl\UISceneCityCtrl.cs" />
+     <Compile Include="Assets\Scripts\UI\sceneUICtrl\UISceneLodingCtrl.cs" />
      <Compile Include="Assets\Scripts\UI\sceneUICtrl\UISceneLoginCtrl.cs" />
      <Compile Include="Assets\Scripts\UI\windowCtrl\UILoginCtrl.cs" />
      <Compile Include="Assets\Scripts\UI\windowCtrl\UIRegisterCtrl.cs" />
+     <Compile Include="Assets\Scripts\UI\windowCtrl\UIRoleInfoCtrl.cs" />
      <Compile Include="Assets\Scripts\Util\GameobjectUtil.cs" />
      <Compile Include="Assets\Scripts\commom\EnumDefine.cs" />
      <Compile Include="Assets\Scripts\commom\GlobalInit.cs" />
-     <Compile Include="Assets\Scripts\commom\LogonSceneCtrl.cs" />
+     <Compile Include="Assets\Scripts\commom\LayerUIMgr.cs" />
      <Compile Include="Assets\Scripts\commom\ResourceMgr.cs" />
+     <Compile Include="Assets\Scripts\commom\SceneMgr.cs" />
+     <Compile Include="Assets\Scripts\cure\SceneCtrlBase.cs" />
      <Compile Include="Assets\Scripts\cure\Singleton.cs" />
      <Compile Include="Assets\Scripts\cure\UIBase.cs" />
      <Compile Include="Assets\Scripts\cure\UISceneBase.cs" />
@@ -266,6 +304,7 @@
      <None Include="Assets\T4M\Shaders\Hidden_PreviewT4M.shader" />
      <None Include="Assets\Source\Models\Player\cike\动画帧数刺客.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 1.shader" />
+     <None Include="Assets\Scene\SceneModel\ShanGu\Shader\MogoSkybox.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
      <None Include="Assets\Source\Models\Boss\dazhuang\帧数参数.txt" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Unified\T4M 4 TexturesUnified.shader" />
@@ -273,8 +312,10 @@
      <None Include="Assets\T4M\Shaders\ShaderModel1\T4M 2 Textures ManualAdd CustoLM 1DC.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Bump\T4M 2 TexturesBumped.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Unified\T4M 2 TexturesUnified.shader" />
+     <None Include="Assets\HUD Text\ReadMe - 1.11.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Unlit\6TexturesUnlit.shader" />
+     <None Include="Assets\Scene\SceneModel\ShanGu\Shader\MogoTransparentDiffuse.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\BumpSpec\T4M 3 TexturesBumpSpec.shader" />
      <None Include="Assets\Source\Models\Monster\qinbing\怪物-亲兵的动画帧数.txt" />
      <None Include="Assets\T4M\Shaders\ShaderModel3\Diffuse\T4M 6 Textures.shader" />
@@ -283,6 +324,7 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Bump\T4M 3 TexturesBumped Mobile.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Unlit\5TexturesUnlit.shader" />
+     <None Include="Assets\HUD Text\Examples\Atlases\Arimo20.txt" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Additive Colored.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
@@ -290,6 +332,7 @@
      <None Include="Assets\T4M\Shaders\ShaderModel1\T4M 2 Textures Auto BeastLM 2DrawCall.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel3\Bump\T4M 2 TexturesBump.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text (TextureClip).shader" />
+     <None Include="Assets\HUD Text\Examples\Atlases\Large.txt" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Toon\T4M 4 Textures Toon.shader" />
@@ -302,10 +345,10 @@
      <None Include="Assets\T4M\Shaders\ShaderModel2\Diffuse\T4M 5 Textures.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\BumpSpec\T4M 2 TexturesBumpSpec.shader" />
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Program Files/unity5.4.1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>D:/Program Files/unity5.4.1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

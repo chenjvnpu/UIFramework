@@ -38,10 +38,10 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>D:/Program Files/unity5.4.1/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>D:/Program Files/unity5.4.1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +196,7 @@
      <None Include="Assets\T4M\Shaders\Hidden_PreviewT4M.shader" />
      <None Include="Assets\Source\Models\Player\cike\动画帧数刺客.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 1.shader" />
+     <None Include="Assets\Scene\SceneModel\ShanGu\Shader\MogoSkybox.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Premultiplied Colored 1.shader" />
      <None Include="Assets\Source\Models\Boss\dazhuang\帧数参数.txt" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Unified\T4M 4 TexturesUnified.shader" />
@@ -203,8 +204,10 @@
      <None Include="Assets\T4M\Shaders\ShaderModel1\T4M 2 Textures ManualAdd CustoLM 1DC.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Bump\T4M 2 TexturesBumped.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Unified\T4M 2 TexturesUnified.shader" />
+     <None Include="Assets\HUD Text\ReadMe - 1.11.txt" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Unlit\6TexturesUnlit.shader" />
+     <None Include="Assets\Scene\SceneModel\ShanGu\Shader\MogoTransparentDiffuse.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\BumpSpec\T4M 3 TexturesBumpSpec.shader" />
      <None Include="Assets\Source\Models\Monster\qinbing\怪物-亲兵的动画帧数.txt" />
      <None Include="Assets\T4M\Shaders\ShaderModel3\Diffuse\T4M 6 Textures.shader" />
@@ -213,6 +216,7 @@
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Packed 3.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Bump\T4M 3 TexturesBumped Mobile.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Unlit\5TexturesUnlit.shader" />
+     <None Include="Assets\HUD Text\Examples\Atlases\Arimo20.txt" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Additive Colored.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Masked.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
@@ -220,6 +224,7 @@
      <None Include="Assets\T4M\Shaders\ShaderModel1\T4M 2 Textures Auto BeastLM 2DrawCall.shader" />
      <None Include="Assets\T4M\Shaders\ShaderModel3\Bump\T4M 2 TexturesBump.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Text (TextureClip).shader" />
+     <None Include="Assets\HUD Text\Examples\Atlases\Large.txt" />
      <None Include="Assets\NGUI\Examples\Shaders\Unlit - Depth.shader" />
      <None Include="Assets\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\Toon\T4M 4 Textures Toon.shader" />
@@ -235,37 +240,37 @@
  <HintPath>F:/GitHub/UIframework/youyou/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
- <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <HintPath>D:/Program Files/unity5.4.1/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll</HintPath>
+ <HintPath>D:/Program Files/unity5.4.1/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.EditorTestsRunner">
- <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll</HintPath>
+ <HintPath>D:/Program Files/unity5.4.1/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ <HintPath>D:/Program Files/unity5.4.1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ <HintPath>D:/Program Files/unity5.4.1/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
- <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ <HintPath>D:/Program Files/unity5.4.1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Networking">
- <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ <HintPath>D:/Program Files/unity5.4.1/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TreeEditor">
- <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ <HintPath>D:/Program Files/unity5.4.1/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
- <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ <HintPath>D:/Program Files/unity5.4.1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Android.Extensions">
- <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
+ <HintPath>D:/Program Files/unity5.4.1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
- <HintPath>D:/Program Files/U3Dxxx5.4.1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ <HintPath>D:/Program Files/unity5.4.1/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
