@@ -32,7 +32,10 @@ public class RoleStateDie : RoleStateAbstract {
 
 			if(CurRoleAnimInfo.normalizedTime >1){//已经执行过一次动画，返回到idle状态
 				//				CurRoleFsmMgr.ChangeState(RoleState.Idle);
-				CurRoleFsmMgr.CurRoleCtrl.RoleDie(CurRoleFsmMgr.CurRoleCtrl);//刷怪点监听
+				if(CurRoleFsmMgr.CurRoleCtrl.RoleDie !=null){
+					CurRoleFsmMgr.CurRoleCtrl.RoleDie(CurRoleFsmMgr.CurRoleCtrl);//刷怪点监听
+				}
+
 			}
 		}
 	}
