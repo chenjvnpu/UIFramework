@@ -1,21 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Role\RoleCtrl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Role/RoleCtrl.cs">
     <Files>
-      <File FileName="Assets\Scripts\SceneCtrl\MonsterAbout\MonsterCreatePoint.cs" Line="52" Column="9" />
-      <File FileName="Assets\Scripts\Role\RoleCtrl.cs" Line="187" Column="58" />
-      <File FileName="Assets\Scripts\Role\RoleMgr.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SceneCtrl\CitySceneCtrl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Role\AI\RoleMonsterAI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Role\AI\IRoleAI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Role\AI\RoleMainPlayerCityAI.cs" Line="1" Column="1" />
-      <File FileName="Assets\Source\Models\Player\cike\动画帧数刺客.txt" Line="1" Column="1" />
-      <File FileName="Assets\Source\Models\Monster\nvbing\怪物-近战女兵.txt" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\commom\ResourceMgr.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\UI\other\RoleHeadBarRoot.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Role\RoleHeadBarCtrl.cs" Line="38" Column="21" />
-      <File FileName="Assets\Scripts\Role\FSM\State\RoleStateAttack.cs" Line="40" Column="5" />
-      <File FileName="Assets\Scripts\Role\FSM\State\RoleStateDie.cs" Line="35" Column="38" />
+      <File FileName="Assets/Scripts/Camera/CameraCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/SceneCtrl/CitySceneCtrl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Role/RoleCtrl.cs" Line="76" Column="33" />
+      <File FileName="Assets/Scripts/Role/FSM/State/RoleStateDie.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Role/RoleMgr.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Role/AI/RoleMainPlayerCityAI.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Role/AI/RoleMonsterAI.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Role/AI/IRoleAI.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

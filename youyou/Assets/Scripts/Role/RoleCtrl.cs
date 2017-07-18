@@ -9,6 +9,21 @@ public class RoleCtrl : MonoBehaviour {
 	private GameObject toBarUI;
 	[SerializeField]
 	public Animator anim;
+	[HideInInspector]
+	public CharacterController characterControl;
+	[HideInInspector]
+	public RoleHeadBarCtrl headBarCtrl;
+	/// <summary>
+	/// 出生点The born point.
+	/// </summary>
+	[HideInInspector]
+	public Vector3 BornPoint;
+	/// <summary>
+	///移动的终点位置 The target position.
+	/// </summary>
+	[HideInInspector]
+	public Vector3 TargetPos;
+
 	/// <summary>
 	/// 当前角色类型  The type of the current role.
 	/// </summary>
@@ -25,24 +40,15 @@ public class RoleCtrl : MonoBehaviour {
 	///当前角色的有限状态机管理 The current role fsm mgr.
 	/// </summary>
 	public RoleFSMMgr currentRoleFsmMgr=null;
-	[HideInInspector]
-	public Vector3 TargetPos;
-	[HideInInspector]
-	public CharacterController characterControl;
-	public float moveSpeed=10f;
-	[HideInInspector]
-	public RoleHeadBarCtrl headBarCtrl;
-	/// <summary>
-	/// 出生点The born point.
-	/// </summary>
-	[HideInInspector]
-	public Vector3 BornPoint;
 
+	/// <summary>
+	///移动速度 The move speed.
+	/// </summary>
+	public float moveSpeed=10f;
 	/// <summary>
 	/// 视野范围The view range.
 	/// </summary>
 	public float viewRange;
-
 	/// <summary>
 	/// 巡逻范围The patrol range.
 	/// </summary>
@@ -67,7 +73,7 @@ public class RoleCtrl : MonoBehaviour {
 	/// <summary>
 	/// Init the specified roleType, roleInfo and roleAI.
 	/// </summary>
-	/// <param name="roleType">Role type.</param>
+	/// <param name="roleType">hues.</param>
 	/// <param name="roleInfo">Role info.</param>
 	/// <param name="roleAI">Role A.</param>
 	public void init(RoleType roleType,RoleInfoBase roleInfo,IRoleAI roleAI){
