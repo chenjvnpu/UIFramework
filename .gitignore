@@ -1,0 +1,12 @@
+#unity basic
+*.csproj
+*.unityproj
+*.booproj
+*.pidb
+*.sln
+*.suo
+*.userprefs
+youyou/Library
+youyou/Temp
+youyou/Documents
+
